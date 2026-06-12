@@ -77,17 +77,7 @@ def get_stats(wnd_speeds, year):
         f"\n\tq3={q3}"
         f"\n\tmax={max}",
         )
-    with open("pc-exercise42.txt", "w", encoding="utf-8") as file:
-        file.write(f"\nBasic Stats for {year}")
-        file.write(
-            f"\n\tmean={mean}",
-            f"\n\tmedian={median}",
-            f"\n\tstd={std}",
-            f"\n\tmin={min}",
-            f"\n\tq1={q1}",
-            f"\n\tq3={q3}"
-            f"\n\tmax={max}",
-            )
+
     return [mean, median, std, min, q1, q3, max]
 
 def cir_exact_path(kappa, theta, sigma, X0, T, N):
@@ -132,9 +122,9 @@ def neg_loglike(params, X, dt):
 bin_size = 1
 location = "Seattle"
 
-df_2022 = pd.read_csv("/content/2022.csv")
-df_2023 = pd.read_csv("/content/2023.csv")
-df_2024 = pd.read_csv("/content/2024.csv")
+df_2022 = pd.read_csv("2022.csv")
+df_2023 = pd.read_csv("2023.csv")
+df_2024 = pd.read_csv("2024.csv")
 
 og_2022 = isolate_data(df_2022)
 clean_2022 = clean_data(og_2022)
@@ -210,15 +200,23 @@ for j in range(num_years):
     tc_means[:, j] = np.mean(tc_estimates[:, :, j], axis=1)
     tc_stds[:, j]  = np.std(tc_estimates[:, :, j], axis=1)
 
-    with open("pc-exercise42.txt", "w", encoding="utf-8") as file:
-        file.write(f"\nYear {2022+j}")
+    with open("pc-exercise42.txt", "a", encoding="utf-8") as file:
+        file.write(f"\n\nBasic Stats for {2022+j}")
+        file.write(f"\n\tmean={stats[j][0]}")
+        file.write(f"\n\tmedian={stats[j][1]}")
+        file.write(f"\n\tstd={stats[j][2]}")
+        file.write(f"\n\tmin={stats[j][3]}")
+        file.write(f"\n\tq1={stats[j][4]}")
+        file.write(f"\n\tq3={stats[j][5]}")
+        file.write(f"\n\tmax={stats[j][6]}")
+        
+        file.write(f"\nMLE Estimates for {2022+j}")
         file.write("\n\tSLSQP")
         file.write("\n\tmeans")
         file.write(f"\n\tkappa={slsqp_means[0][j]:4f}, theta={slsqp_means[1][j]:4f}, sigma={slsqp_means[2][j]:4f}")
         file.write("\n\tstandard deviations")
         file.write(f"\n\tkappa={slsqp_stds[0][j]:4f}, theta={slsqp_stds[1][j]:4f}, sigma={slsqp_stds[2][j]:4f}")
-
-        file.write("\nn\tTRUST-CONSTR")
+        file.write("\n\tTRUST-CONSTR")
         file.write("\n\tmeans")
         file.write(f"\n\tkappa={tc_means[0][j]:4f}, theta={tc_means[1][j]:4f}, sigma={tc_means[2][j]:4f}")
         file.write("\n\tstandard deviations")

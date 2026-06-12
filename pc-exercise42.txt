@@ -1,0 +1,61 @@
+
+
+Basic Stats for 2022
+	mean=3.368348540970277
+	median=3.1
+	std=1.9887840127648202
+	min=0.0
+	q1=2.1
+	q3=4.6
+	max=13.4
+MLE Estimates for 2022
+	SLSQP
+	means
+	kappa=4.856222, theta=3.120509, sigma=1.976153
+	standard deviations
+	kappa=2.864279, theta=0.737878, sigma=0.293020
+	TRUST-CONSTR
+	means
+	kappa=4.899049, theta=3.157679, sigma=1.978610
+	standard deviations
+	kappa=2.827355, theta=0.725338, sigma=0.289077
+
+Basic Stats for 2023
+	mean=3.370968339196446
+	median=3.1
+	std=1.9419485570954529
+	min=0.0
+	q1=2.1
+	q3=4.6
+	max=27.3
+MLE Estimates for 2023
+	SLSQP
+	means
+	kappa=6.160995, theta=3.249606, sigma=1.933641
+	standard deviations
+	kappa=2.822768, theta=0.715683, sigma=0.258663
+	TRUST-CONSTR
+	means
+	kappa=6.196082, theta=3.283674, sigma=1.944917
+	standard deviations
+	kappa=2.779534, theta=0.705994, sigma=0.255960
+
+Basic Stats for 2024
+	mean=3.4283608079869983
+	median=3.1
+	std=1.8837839352910273
+	min=0.0
+	q1=2.1
+	q3=4.6
+	max=13.9
+MLE Estimates for 2024
+	SLSQP
+	means
+	kappa=5.484650, theta=3.428334, sigma=1.858374
+	standard deviations
+	kappa=3.077609, theta=0.723599, sigma=0.280996
+	TRUST-CONSTR
+	means
+	kappa=5.541394, theta=3.463487, sigma=1.872903
+	standard deviations
+	kappa=3.010647, theta=0.708048, sigma=0.275857
