@@ -1,0 +1,11 @@
+
+SLSQP
+means
+kappa=0.868429, theta=4.318868, sigma=1.013688
+standard deviations
+kappa=0.533544, theta=1.502957, sigma=0.066948
+trust-constr
+means
+kappa=0.868428, theta=4.318893, sigma=1.013688
+standard deviations
+kappa=0.533545, theta=1.503018, sigma=0.066948
