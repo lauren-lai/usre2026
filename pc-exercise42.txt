@@ -59,3 +59,13 @@ MLE Estimates for 2024
 	kappa=5.541394, theta=3.463487, sigma=1.872903
 	standard deviations
 	kappa=3.010647, theta=0.708048, sigma=0.275857
+
+
+
+
+
+
+
+
+
+
